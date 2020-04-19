@@ -16,7 +16,10 @@
         <div class="card-header">
           <h2>Make a SECURED Password!</h2>
         </div>
-        <!-- <div class="select">
+        <div>
+          <h3>Please define your criteria below:</h3>
+        </div>
+        <div class="select">
           <form>
             <div>
               <input id="lowerCase" type="checkbox" name="lower Case" checked />
@@ -26,29 +29,40 @@
               <input id="upperCase" type="checkbox" name="Upper Case" checked />
               Upper Case (A, B, C, D, E,...)
             </div>
-            <div id="numbers">
-              <input type="checkbox" name="Numbers" checked />
+            <div>
+              <input id="numbers" type="checkbox" name="Numbers" checked />
               Numbers (1, 2, 3, 4,...)
             </div>
-            <div id="Char">
-              <input type="checkbox" name="Characters" checked />
+            <div>
+              <input
+                id="Characters"
+                type="checkbox"
+                name="Characters"
+                checked
+              />
               Special Characters (!, @, #, $, %,...)
             </div>
-            <div id="length">
+            <div>
               <br />
               Length of password?
-              <input type="text" value="" placeholder="Enter #" />
+              <input
+                id="pwlength"
+                type="text"
+                value=""
+                placeholder="Pick # between 8-28"
+              />
+            </div>
+            <div>
+              <button id="generate" class="btn">Generate</button>
             </div>
           </form>
-        </div> -->
+        </div>
         <div class="card-body">
-          <p id="password"></p>
+          <h2 id="PWoutput"></h2>
         </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate</button>
-        </div>
+        <div class="card-footer"></div>
       </div>
     </div>
-    <script src="app.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,119 +1,49 @@
 // variable definitions
-// var generateBtn = document.querySelector("#generate");
-var lowerCase = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-];
-var upperCase = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-];
-const numChar = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var specialChar = [
-  "!",
-  "”",
-  "#",
-  "$",
-  "%",
-  "&",
-  "’",
-  "*",
-  "+",
-  "-",
-  "/",
-  ":",
-  ";",
-  "<",
-  "=",
-  ">",
-  "?",
-  "@",
-  "[",
-  "]",
-  "^",
-  "_",
-  "`",
-  "{",
-  "|",
-  "}",
-  "~",
-];
+var lowerCase = ["abcdefghijklmnopqrstuvwxyz"];
+var upperCase = ["ABCDEFGHIJKLMNOPQRSTUVXYZ"];
+var numbers = ["0123456789"];
+var Characters = ["!@#$%^&*()_++-/?><;|'"];
 
 // Write password to the #password input
-function mix(num, arr) {
-  var possibilityIndex = 0;
+// This is where when user clicks Generate, it takes variables and goes thru function loop.
+document.getElementById("generate").addEventListener("click", function (e) {
+  e.preventDefault();
+  var LC = document.getElementById("lowerCase").checked;
+  var UC = document.getElementById("upperCase").checked;
+  var NC = document.getElementById("numbers").checked;
+  var SC = document.getElementById("Characters").checked;
+  // var pwlength = 8;
+  var pwlength = document.getElementById("pwlength").value;
   var password = "";
-  var targetArray = [];
 
-  for (var i = 0; i < num; i++) {
-    targetArray = arr[possibilityIndex];
-    possibilityIndex++;
-    password += targetArray[Math.floor(Math.random() * targetArray.length)];
-
-    if (possibilityIndex === arr.length) {
-      possibilityIndex = 0;
+  if (pwlength < 8 || pwlength > 28) {
+    console.log(pwlength);
+    alert("Password's LENGTH value is not in range, try again; choose 8-28.");
+  } else if (LC === false || UC === false || NC === false || SC === false) {
+    alert("Just keep all 4 criterias checked, it's the most SECURED.");
+  } else {
+    if (LC === true) {
+      password += lowerCase;
+    }
+    if (UC === true) {
+      password += upperCase;
+    }
+    if (NC === true) {
+      password += numbers;
+    }
+    if (SC === true) {
+      password += Characters;
     }
   }
 
-  // return password.split("");
-
-  var pwArray = password.split("");
-  var arrayLength = passwordArray.length;
-  var scrambledPassword = "";
+  var PWoutput = "";
   var rand = 0;
 
-  for (var i = 0; i < arrayLength; i++) {
-    rand = Math.floor(Math.random() * passwordArray.length);
-    scrambledPassword += passwordArray.splice(rand, 1);
+  for (var i = 0; i < pwlength; i++) {
+    rand = Math.floor(Math.random() * password.length);
+    PWoutput += password[rand];
   }
+  document.getElementById("PWoutput").innerHTML = PWoutput;
 
-  return [{ betterPassword: scrambledPassword, lamePassword: password }];
-}
+  // return [{ betterPassword: scrambledPassword, lamePassword: password }];
+});
