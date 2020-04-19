@@ -42,3 +42,4 @@ Submit on BCS:
 - Touched up html format to make it less generic.
 - compiled random password loop for testing. (help of TS's video.
 - password generator ready.
+- Attempted user inputs for password criteria into HTML.(hidden)

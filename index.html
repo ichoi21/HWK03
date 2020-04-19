@@ -14,15 +14,35 @@
       </header>
       <div class="card">
         <div class="card-header">
-          <h2>Have a Password Made for you!</h2>
+          <h2>Make a SECURED Password!</h2>
         </div>
+        <!-- <div class="select">
+          <form>
+            <div>
+              <input id="lowerCase" type="checkbox" name="lower Case" checked />
+              Lower Case (a, b, c, d, e,...)
+            </div>
+            <div id="upperCase">
+              <input id="upperCase" type="checkbox" name="Upper Case" checked />
+              Upper Case (A, B, C, D, E,...)
+            </div>
+            <div id="numbers">
+              <input type="checkbox" name="Numbers" checked />
+              Numbers (1, 2, 3, 4,...)
+            </div>
+            <div id="Char">
+              <input type="checkbox" name="Characters" checked />
+              Special Characters (!, @, #, $, %,...)
+            </div>
+            <div id="length">
+              <br />
+              Length of password?
+              <input type="text" value="" placeholder="Enter #" />
+            </div>
+          </form>
+        </div> -->
         <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
+          <p id="password"></p>
         </div>
         <div class="card-footer">
           <button id="generate" class="btn">Generate</button>

@@ -86,14 +86,10 @@ var Char = [
 ];
 var generateBtn = document.querySelector("#generate");
 
-generateBtn.addEventListener("click", mix);
-
 function mix(num, arr) {
   var possibilityIndex = 0;
   var password = scramblePw;
   var passwordText = document.querySelector("#password");
-
-  passwordText.value = scramblePw;
 
   targetArray = [];
 
@@ -124,3 +120,13 @@ function mix(num, arr) {
 }
 
 console.log(mix(8, [lowerCase, upperCase, Char, numbers]));
+
+generateBtn.addEventListener(
+  "click",
+  function () {
+    document.body.appendChild("#password");
+  }
+
+  // (e) => {
+  // e.preventDefault();
+);
