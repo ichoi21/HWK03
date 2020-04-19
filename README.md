@@ -41,3 +41,4 @@ Submit on BCS:
 - Upload based structure.
 - Touched up html format to make it less generic.
 - compiled random password loop for testing. (help of TS's video.
+- password generator ready.
