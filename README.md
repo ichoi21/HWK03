@@ -39,3 +39,5 @@ Submit on BCS:
 
 - Setup GitHub Repo to start upload commits for back up and live testings.
 - Upload based structure.
+- Touched up html format to make it less generic.
+- compiled random password loop for testing. (help of TS's video.
