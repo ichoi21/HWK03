@@ -1,5 +1,5 @@
 // variable definitions
-var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+var lowerCase = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVXYZ";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
 var numbers = "0123456789";
 var Characters = "!@#$%^&*()_++-/?><;|'";
