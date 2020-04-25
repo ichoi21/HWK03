@@ -1,8 +1,8 @@
 // variable definitions
-var lowerCase = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVXYZ";
+var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVXYZ";
 var numbers = "0123456789";
-var Characters = "!@#$%^&*()_++-/?><;|'";
+var Characters = "!@#$%^&*()_++-/?><;|{}'";
 
 // Write password to the #password input
 // This is where when user clicks Generate, it takes variables and goes thru function loop.
@@ -18,8 +18,8 @@ document.getElementById("generate").addEventListener("click", function (e) {
 
   if (pwlength < 8 || pwlength > 28) {
     alert("Password's LENGTH value is not in range, try again; choose 8-28.");
-  } else if (LC === false || UC === false || NC === false || SC === false) {
-    alert("Just keep all 4 criterias checked, it's the most SECURED.");
+  } else if (LC === false && UC === false && NC === false && SC === false) {
+    alert("One of the Criterias is needed to be selected.");
   } else {
     if (LC === true) {
       password += lowerCase;

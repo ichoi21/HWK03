@@ -36,3 +36,4 @@ Submit on BCS:
 - password generator ready.
 - Attempted user inputs for password criteria into HTML.(hidden)
 - User Inputs are working with exception of upperCase
+- upperCase is now working - allowed users to select their choices of criterias
