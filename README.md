@@ -37,4 +37,4 @@ Submit on BCS:
 - Attempted user inputs for password criteria into HTML.(hidden)
 - User Inputs are working with exception of upperCase
 - upperCase is now working - allowed users to select their choices of criterias
-- added
+- HTML file had extra class causing a double negative(?). Deleting it fixed the errors.
