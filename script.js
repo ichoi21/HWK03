@@ -20,6 +20,7 @@ document.getElementById("generate").addEventListener("click", function (e) {
     alert("Password's LENGTH value is not in range, try again; choose 8-28.");
   } else if (LC === false && UC === false && NC === false && SC === false) {
     alert("One of the Criterias is needed to be selected.");
+    // changed the || to && to enable user to select criterias.
   } else {
     if (LC === true) {
       password += lowerCase;
@@ -44,3 +45,4 @@ document.getElementById("generate").addEventListener("click", function (e) {
   }
   document.getElementById("PWoutput").innerHTML = PWoutput;
 });
+//for loop which random selects variables
